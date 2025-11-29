@@ -44,7 +44,8 @@ with col2:
     """)
 
 st.markdown("---")
-st.subheader("🏆 Achievements")
+
+st.subheader("**Achievements**")
 st.write("Here are some milestones and accomplishments from my academic and professional journey.")
 
 

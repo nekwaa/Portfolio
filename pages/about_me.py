@@ -52,8 +52,17 @@ cols[1].markdown("**Soft Skills**\n- Critical thinking\n- Teamwork\n- Communicat
 st.subheader("Tools & Technologies")
 st.write("VSCode • Jupyter • Git • Power BI • Firebase • Flutter (basic) • Streamlit")
 
+
 st.markdown("---")
 st.subheader("Contact")
-st.write("📍 Lucena City")
-st.write("📱 09381797461")
-st.write("📧 juanmacatangga1@gmail.com")
+
+cols = st.columns(3)
+
+with cols[0]:
+    st.write("Lucena City")
+
+with cols[1]:
+    st.write("09381797461")
+
+with cols[2]:
+    st.write("juanmacatangga1@gmail.com")
