@@ -43,3 +43,24 @@ with col2:
     Explore projects, interactive demos, and deployment-ready artifacts.
     """)
 
+st.markdown("---")
+st.subheader("🏆 Achievements")
+st.write("Here are some milestones and accomplishments from my academic and professional journey.")
+
+
+cols = st.columns(3)
+
+with cols[0]:
+    st.markdown("**Manuel S. Enverga University**")
+    st.write("2022-present – Consistent Scholar & Dean’s Lister")
+    st.image("assets/images/scholar.jpg", width=350)
+
+with cols[1]:
+    st.markdown("**BPI Datawave 2024**")
+    st.write("Machine Learning – 3rd Place")
+    st.image("assets/images/datawave.jpg", width=350)
+
+with cols[2]:
+    st.markdown("**InnOlympics 2025**")
+    st.write("Top 5 Finalist")
+    st.image("assets/images/innolympics.jpg", width=350)
