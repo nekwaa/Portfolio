@@ -137,3 +137,31 @@ with st.expander("IoT Indoor Air Quality & Noise Monitoring System"):
         # small synthetic prediction (moving average)
         pred = samples["CO2"].rolling(3).mean().iloc[-1] + np.random.randn()*2
         st.success(f"Predicted next CO2 (ppm): {pred:.1f} — demo result")
+
+
+with st.expander("Power BI Dashboards Showcase"):
+    st.subheader("Overview")
+    st.write("""
+    Here are screenshots of my Power BI dashboards showcasing analytics, insights, and reporting solutions I have developed.
+    """)
+
+    # Display dashboards in 2 per row
+    dashboards = [
+        ("Global Temperature Change", "assets/images/Final Output_page-0001.jpg"),
+        ("Global Temperature Change - Insights", "assets/images/Final Output_page-0002.jpg"),
+        ("Global GDP Comparison", "assets/images/Semifinal Output_page-0001.jpg"),
+        ("Global GDP Comparison - Insights", "assets/images/Semifinal Output_page-0002.jpg")
+        # Add more as needed
+    ]
+
+    # Loop through images in pairs
+    for i in range(0, len(dashboards), 2):
+        cols = st.columns(2)
+        for j, col in enumerate(cols):
+            if i + j < len(dashboards):
+                title, img_path = dashboards[i + j]
+                col.image(img_path, caption=title, use_container_width =True)
+
+    col1, col2, col3 = st.columns([1, 2, 1])  # middle column is wider
+    with col2:
+        st.image("assets/images/personal training.png", caption="Personal Trainig Program")
