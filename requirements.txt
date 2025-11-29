@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+scikit-learn
+plotly
+pydeck
+matplotlib
+joblib
+Pillow
+streamlit-player
