@@ -31,7 +31,7 @@ col1, col2 = st.columns([1,3])
 with col1:
     try:
         img = Image.open("assets/images/portrait.jpg")
-        st.image(img, width=160, caption="Juan Carlos R. Macatangga")
+        st.image(img, width=260)
     except:
         st.image("https://placehold.co/160x160?text=Portrait", width=160)
 

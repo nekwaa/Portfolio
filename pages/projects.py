@@ -39,8 +39,77 @@ st.write("Here are the systems and applications I have developed:")
 
 st.title("Project Showcase")
 
-# Project: IoT Indoor Air Quality
-with st.expander("📌 IoT Indoor Air Quality & Noise Monitoring System", expanded=True):
+with st.expander("Project SBAFN — Street-based Assessment for Flood-prone Neighborhoods"):
+    st.subheader("Overview")
+    st.write("""
+    Project SBAFN is an AI-powered system that assesses flood-proneness of streets in Metro Manila at a **street-segment level**.  
+    Unlike traditional area-based hazard maps, this project provides **granular, actionable insights** for local governments, urban planners, and commuters.
+    """)
+    st.subheader("Problem")
+    st.write("""
+    Flooding in Metro Manila remains a persistent challenge due to rapid urbanization, inadequate drainage, and extreme rainfall.  
+    Current hazard maps operate at neighborhood or barangay level, leaving critical **street-level gaps** in actionable information for planning and mobility.
+    """)
+    st.subheader("Methodology")
+    st.write("""
+    The project follows a multi-phase methodology:
+
+    1. **Data Acquisition:** Street-level images, DEM, road networks, rainfall data, and flood incidents.  
+    2. **Feature Engineering:** Extract physical, hydrologic, and streetscape features.  
+    3. **Model Development:** Train AI models to predict flood-proneness; ensure explainability.  
+    4. **Application Development:** Interactive web app showing flood-proneness scores per street.  
+    5. **Evaluation:** Validate predictions against historical flood records and benchmark with Project NOAH.
+    """)
+
+    col1, col2 = st.columns([1, 1])
+    with col1:
+        st.image("assets/images/10.jpg",  width=650)
+    with col2:
+        st.image("assets/images/12.jpg",  width=650)
+
+with st.expander("MSME Lending & Blockchain Solution"):
+    st.subheader("Overview")
+    st.write("""
+    This project provides a **data-driven, equitable lending system** for MSMEs in the Philippines, 
+    especially in underserved sectors like agriculture, fisheries, and indigenous communities.  
+    By leveraging **machine learning** and optionally **blockchain**, the solution improves credit accessibility 
+    and transparency for banks and borrowers.
+    """)
+
+    st.subheader("Problem Statement")
+    st.write("""
+    Many MSMEs struggle to access loans due to lack of formal financial records.  
+    Traditional lending practices often exclude businesses from indigenous, agricultural, and fisheries sectors.  
+    This solution aims to **reduce financial exclusion** and support business growth.
+    """)
+
+    st.subheader("Solution Approach")
+    st.write("""
+    **Part I - Machine Learning for Alternative Credit Assessment**  
+    Uses non-financial metrics such as social impact, environmental affiliation, number of guarantors, seasonal trends, geolocation, and utility bill payments to evaluate loan eligibility.
+
+    **Part II - Blockchain Integration (Optional)**  
+    Provides a decentralized, tamper-proof ledger for transaction monitoring, improving transparency and trust in loan evaluations.  
+    Supports smart contracts for validation and risk assessment via ML models.
+
+    **Part III - Loan Settings Restructuring**  
+    Proposes longer repayment periods and adjusted interest rates to accommodate MSMEs' financial capabilities.
+    """)
+
+    st.subheader("Technical Details & Technology Stack")
+    st.write("""
+    **Machine Learning:** scikit-learn, pandas, NumPy, Jupyter Notebook  
+    **Blockchain:** Hyperledger Fabric, PoA/Raft consensus, Chaincode (Node.js)  
+    **Data Storage:** CouchDB, LevelDB  
+    **Integration:** FabricSDK, REST APIs  
+    **Deployment:** Docker, AWS/Azure/GCP  
+    """)
+
+    col1, col2, col3 = st.columns([1, 2, 1])  # middle column is wider
+    with col2:
+        st.image("assets/images/banner.png",  width=650)
+
+with st.expander("IoT Indoor Air Quality & Noise Monitoring System"):
     st.write("**Overview:** Real-time IoT system that monitors indoor air quality (CO2, PM2.5, humidity) and noise levels with predictive models for short-term forecasting.")
     st.write("**Problem:** Indoor health and productivity are affected by hidden air-quality issues. This system gives actionable insights and alerts.")
     st.write("**Features:** Realtime dashboard, predictive model, alerts, data logging.")
