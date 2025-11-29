@@ -68,25 +68,3 @@ with st.expander("📌 IoT Indoor Air Quality & Noise Monitoring System", expand
         # small synthetic prediction (moving average)
         pred = samples["CO2"].rolling(3).mean().iloc[-1] + np.random.randn()*2
         st.success(f"Predicted next CO2 (ppm): {pred:.1f} — demo result")
-
-# Project: ClickaRide
-with st.expander("📌 ClickaRide — Taxi & TODA Locating App"):
-    st.write("Overview, problem, features. Use map samples below.")
-    try:
-        import pydeck as pdk
-        import pandas as pd
-        df = pd.DataFrame({
-            "lat":[13.95, 13.95, 13.94],
-            "lon":[121.61, 121.62, 121.60],
-            "name":["Taxi A","Jeepney Cluster","TODA Spot"]
-        })
-        st.pydeck_chart(pdk.Deck(
-            initial_view_state=pdk.ViewState(latitude=13.95, longitude=121.61, zoom=12),
-            layers=[pdk.Layer("ScatterplotLayer", df, get_position='[lon, lat]', get_radius=100, pickable=True, get_fill_color=[200, 30, 0, 160])]
-        ))
-    except Exception as e:
-        st.write("Map requires pydeck; install requirements and run locally.")
-
-# Project: DICT Dashboards
-with st.expander("📌 DICT — Data Analytics Dashboards (OJT)"):
-    st.write("Built automated Power BI dashboards and performed churn analysis. See images or embed links if available.")
