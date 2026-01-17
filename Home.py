@@ -13,7 +13,7 @@ cols = st.columns(4)
 def go(page_name):
     st.session_state.page_to_go = page_name  # set the page to go
 
-cols[0].button("About",  on_click=lambda: go("about_Me"))
+cols[0].button("About",  on_click=lambda: go("about_me"))
 cols[1].button("Projects", on_click=lambda: go("projects"))
 cols[2].button("Dev Process", on_click=lambda: go("development"))
 cols[3].button("Contact", on_click=lambda: go("contact"))
